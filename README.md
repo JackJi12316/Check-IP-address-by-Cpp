@@ -13,8 +13,8 @@ By C, achieving to judge IP address, some like judge an IP adress that use an IP
  * * *
 #二、设计分析
 ##采用结构体如下：
-1.	//IP  
-2.	struct Ip {  
+//IP  
+struct Ip {  
 3.	    DWORD Part[4];  
 4.	};  
 5.	//子网掩码  
@@ -24,16 +24,16 @@ By C, achieving to judge IP address, some like judge an IP adress that use an IP
 9.	  
 10.	//路由表项  
 11.	typedef struct routingTableItem {  
-12.	    Ip ip;          //IP地址  
-13.	    SubIp subIP;    //子网掩码  
-14.	}tableItem;  
-15.	  
-16.	//路由表  
-17.	typedef struct routingTable {  
-18.	    tableItem item[Max];    //路由表项  
-19.	    DWORD checksum[Max];    //校验和  
-20.	    int n;  //表项数
-21.	}table;  
+	    Ip ip;          //IP地址  
+    SubIp subIP;    //子网掩码  
+	}tableItem;  
+	  
+	//路由表  
+	typedef struct routingTable {  
+	    tableItem item[Max];    //路由表项  
+    DWORD checksum[Max];    //校验和  
+   int n;  //表项数	
+}table;  
 由点分十进制的特点，每个IP和子网掩码分为四个部分，对应实际IP写法。
 其中DWORD为unsigned int型，32位无符号整数，符合网络地址的特性，用于存储校验和。
 
