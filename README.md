@@ -1,5 +1,5 @@
 ## check IP-address-by-C
-By C, achieving to judge IP address, some like judge an IP adress that use an IP table to check whether legal
+By C, achieving to judge IP address, some like judge an IP adress that use an IP table to check whether it is legal...
 
 
 #一、实验概述
